@@ -36,10 +36,13 @@ String action = request.getParameter("action");
         </form>
         
         <div>
-            <p>Data: <%=meuBean.getData()%></p>
-            <p style="color:<%=meuBean.getCor_temp()%>;">Local: <%=meuBean.getLocal()%></p>
+            <p>Data: <b><%=meuBean.getData()%></b></p>
+            <p>Local: <%=meuBean.getLocal()%></p>
             <p>Situação: <%=meuBean.getTexto_situacao()%></p>
-            <p>Temperatura: <%=meuBean.getTemperatura()%> <%=meuBean.getUnit()%> º</p>
+            <p style="color:<%=meuBean.getCor_temp()%>;">Temperatura: <%=meuBean.getTemperatura()%> <%=meuBean.getUnit()%> º</p>
+            <div>
+            <img src="imgs/<%=meuBean.getCod_situacao()%>" style="width: 100px;height: 100px">
+            </div>
         </div>
         <script>
             function buscar(){

@@ -102,10 +102,10 @@ public class TempoClass {
                         cor_temp = "red";
 
                     }
-
+                    
                     meuBean.setData(date.toString());
                     meuBean.setTemperatura(temp.toString());
-                    meuBean.setCod_situacao(code.toString());
+                    meuBean.setCod_situacao(code.toString()+".jpg");
                     meuBean.setTexto_situacao(text.toString());
                     meuBean.setCor_temp(cor_temp);
                     System.out.println(meuBean.getUnit());
