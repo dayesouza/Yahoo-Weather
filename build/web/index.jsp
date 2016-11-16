@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>WeatherRedder</title>
     </head>
     <body>
         <%
@@ -25,18 +25,21 @@ if( meuBean != null ) {
 <%
 String action = request.getParameter("action");
 %>
-        <h1>Hello World!</h1>
+        <h2>Descubra como está o tempo!</h2>
         <form name="f1" action="" method="POST">
         <input type="text" name="campoLocal">
         <select name="campoUnit">
             <option value="C">ºC</option>
             <option value="F">ºF</option>
-        </select>
-        <input type="button" name="btnGravar" value="OK" onClick="buscar()">
+        </select><br><br>
+        <input type="button" name="btnGravar" value="Buscar" onClick="buscar()">
         </form>
         
         <div>
-            <p><%=meuBean.getResultado()%></p>
+            <p>Data: <%=meuBean.getData()%></p>
+            <p style="color:<%=meuBean.getCor_temp()%>;">Local: <%=meuBean.getLocal()%></p>
+            <p>Situação: <%=meuBean.getTexto_situacao()%></p>
+            <p>Temperatura: <%=meuBean.getTemperatura()%> <%=meuBean.getUnit()%> º</p>
         </div>
         <script>
             function buscar(){
